@@ -1,31 +1,37 @@
 def half_array(arr, num, s) :
 
-   l = int(len(arr))//2
-   print("l=" + str(l) )
+   if num == arr[0]:
 
-   if l > 0:
-      if num > arr[l]:
-         print (arr[l:])
-         s = s + l
-         print("s=" + str(s))
-         half_array(arr[l:], num, s)
-      elif num < arr[l]:
-         print (arr[:l])
-         half_array(arr[:l], num, s)
-      elif num == arr[l]:
-         s = s + l
-         print("index = " + str(s))
-   else :
-      print(-1)
+      print("element index is = 0")
+
+   else:
+
+      l = int(len(arr))//2
+
+      if l > 0:
+         if num > arr[l]:
+            s = s + l
+            half_array(arr[l:], num, s)
+
+         elif num < arr[l]:
+            half_array(arr[:l], num, s)
+
+         elif num == arr[l]:
+            s = s + l
+            print("element index is = " + str(s))
+
+      else :
+         print("element isn't in this array -1")
+
 
 arr = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 12, 13, 14, 15]
 
-num = 9
+half_array(arr, 11, 0)
 
-print("num = " + str(num))
+half_array(arr, 3, 0)
 
-s = 0
+half_array(arr, 0, 0)
 
-f = half_array(arr, num, s)
+half_array(arr, 15, 0)
 
-print(arr[9])
+half_array(arr, 10, 0)
