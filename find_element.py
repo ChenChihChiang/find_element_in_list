@@ -35,3 +35,9 @@ half_array(arr, 0, 0)
 half_array(arr, 15, 0)
 
 half_array(arr, 10, 0)
+
+half_array(arr, 4, 0)
+
+half_array(arr, 5, 0)
+
+half_array(arr, 2, 0)
